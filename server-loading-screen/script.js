@@ -1,4 +1,4 @@
-const DefaultServerLoadindHeader = '<i class="material-icons">construction</i>' +
+const DefaultServerLoadingHeader = '<i class="material-icons">construction</i>' +
 '                <h1>LazyDB <span>Alpha</span></h1>' +
 '                <h5>Next-gen SaaS backend</h5>';
 

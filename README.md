@@ -31,6 +31,6 @@ Then, you just have to call OpenServerLoadingScreen anytime you want :
 ```javascript
 const optional_title = "Loading in progress";
 const optional_message = "Your content will appear in a few second :)";
-const optional_header = DefaultServerLoadindHeader;
+const optional_header = DefaultServerLoadingHeader;
 OpenServerLostScreen(optional_title, optional_message, optional_header);
 ```
