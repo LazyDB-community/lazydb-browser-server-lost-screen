@@ -91,6 +91,7 @@ body{
     position: relative;
     width: 150px;
     height: 150px;
+    background: none;
 }
 .lazydb_load_error_lds-ripple.red div {
     position: absolute;
