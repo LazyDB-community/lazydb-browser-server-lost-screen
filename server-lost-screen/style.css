@@ -85,3 +85,17 @@ body{
     border-top: 30px solid var(--server-lost-primary_ligth);
     margin: 0 0 0 calc(50% - 30px);
 }
+
+.lazydb_load_error_lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.lazydb_load_error_lds-ripple.red div {
+    position: absolute;
+    border: 5px solid var(--server-lost-red);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
