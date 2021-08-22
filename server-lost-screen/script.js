@@ -13,7 +13,7 @@ function OpenServerLostScreen(title = "Connection lost", message = "Connection t
         '            <div class="loading">\n' +
         '                <h1>' + title + '</h1>\n' +
         '                <div class="lds-ripple red"><div></div><div></div></div>\n' +
-        '                <h4 id="error_sub_title">' + message + ' (auto retry in <span>' + (ServerLostAutoRetryTime / 1000) + '</span>s)</h4>\n' +
+        '                <h4 id="lazydb_load_error_sub_title">' + message + ' (auto retry in <span>' + (ServerLostAutoRetryTime / 1000) + '</span>s)</h4>\n' +
         '            </div>\n' +
         '        </div>\n' +
         '    </div>\n' +
@@ -24,6 +24,6 @@ function OpenServerLostScreen(title = "Connection lost", message = "Connection t
     let cpt = 10;
     setInterval(function (){
         cpt -= 1;
-        document.getElementById('error_sub_title').getElementsByTagName('span')[0].innerHTML=cpt
-    },ServerLostAutoRetryTime / 1000);
+        document.getElementById('lazydb_load_error_sub_title').getElementsByTagName('span')[0].innerHTML=cpt
+    },ServerLostAutoRetryTime / 10);
 }

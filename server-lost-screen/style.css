@@ -5,7 +5,7 @@ body{
     --server-lost-red: rgba(238, 82, 83,1.0);
 }
 
-.load_error .container{
+.lazydb_load_error .container{
     background: var(--server-lost-blue);
     height: 100vh;
     width: 100%;
@@ -15,7 +15,7 @@ body{
     gap: 5%;
 }
 
-.load_error .sub_container{
+.lazydb_load_error .sub_container{
     width: 60%;
     color: var(--server-lost-primary);
     background: #FFFFFF;
@@ -23,7 +23,7 @@ body{
     box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
 }
 
-.load_error .header{
+.lazydb_load_error .header{
     padding: 25px 0;
     width: 100%;
     background: var(--server-lost-primary_ligth);
@@ -36,7 +36,7 @@ body{
     flex-direction: column;
 }
 
-.load_error .header h1{
+.lazydb_load_error .header h1{
     margin: 15px 0;
     font-size: 35px;
     display: flex;
@@ -44,18 +44,18 @@ body{
     gap: 10px;
 }
 
-.load_error .header h5{
+.lazydb_load_error .header h5{
     margin: 0;
     font-size: 13px;
     font-weight: normal;
 }
 
-.load_error .header i{
+.lazydb_load_error .header i{
     margin: 0;
     font-size: 75px;
 }
 
-.load_error .header h1 span{
+.lazydb_load_error .header h1 span{
     margin: 0;
     font-size: 16px;
     padding: 8px 12px;
@@ -65,7 +65,7 @@ body{
     box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
 }
 
-.load_error .loading{
+.lazydb_load_error .loading{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,11 +73,11 @@ body{
     padding: 25px;
 }
 
-#error_sub_title b{
+#lazydb_load_error_sub_title b{
     color: var(--server-lost-red);
 }
 
-.load_error .sub_container .arrow-down {
+.lazydb_load_error .sub_container .arrow-down {
     width: 0;
     height: 0;
     border-left: 30px solid transparent;
