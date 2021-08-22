@@ -97,5 +97,22 @@ body{
     border: 5px solid var(--server-lost-red);
     opacity: 1;
     border-radius: 50%;
-    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: lazydb_load_error_lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes lazydb_load_error_lds-ripple {
+    0% {
+        top: 75px;
+        left: 75px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+    }
 }
