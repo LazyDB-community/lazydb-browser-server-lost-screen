@@ -6,9 +6,11 @@ A dynamic screen to nicely tell your users when something goes wrong.
 
 Add the includes to your html head :
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 <link href="https://browser-tools.lazydb.com/server-lost-screen/style.css" rel="stylesheet">
 <script src="https://browser-tools.lazydb.com/server-lost-screen/script.js"></script>
+
+<!-- Optional, material icons for default header -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 ```
 Then, you just have to call OpenServerLostScreen anytime you want :
 ```javascript
@@ -23,9 +25,11 @@ A dynamic screen to nicely tell your users when something is loading.
 
 Add the includes to your html head :
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 <link href="https://browser-tools.lazydb.com/server-loading-screen/style.css" rel="stylesheet">
 <script src="https://browser-tools.lazydb.com/server-loading-screen/script.js"></script>
+
+<!-- Optional, material icons for default header -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 ```
 Then, you just have to call OpenServerLoadingScreen anytime you want :
 ```javascript
@@ -40,11 +44,18 @@ A dynamic login screen.
 
 Add the includes to your html head :
 ```html
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+<!-- CDN for the loading screen -->
 <link href="https://browser-tools.lazydb.com/connect-screen/style.css" rel="stylesheet">
 <script src="https://browser-tools.lazydb.com/connect-screen/script.js"></script>
+
+<!-- The official LazyDB connector for the browser -->
 <script src="https://lazybrowser.lazydb.com/lazydb.js"></script>
+
+<!-- Sweetalert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+
+<!-- Optional, material icons for default header -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 ```
 Then, you just have to call OpenConnectScreen anytime you want :
 ```javascript
