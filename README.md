@@ -60,10 +60,11 @@ Add the includes to your html head :
 Then, you just have to call OpenConnectScreen anytime you want :
 ```javascript
 const db = new Database("alpha.lazydb.com", 'your_port', function(){});
-const optionnal_onConnect = function (){alert('Execute function when user is connected')};
+const optionnal_onConnect = function (userData){alert('Connected as ' + userData.username)};
+const optionnal_onError = function (error){alert(error)};
 const optionnal_title = "Login";
 const optionnal_message = "Sign into your account";
 const optionnal_img = "https://browser-tools.lazydb.com/logo_lazydb.png";
 const optionnal_header = DefaultLoginHeader;
-OpenConnectScreen(db,optionnal_onConnect,optionnal_title,optionnal_message,optionnal_img,optionnal_header);
+OpenConnectScreen(db,optionnal_onConnect,optionnal_onError,optionnal_title,optionnal_message,optionnal_img,optionnal_header);
 ```
