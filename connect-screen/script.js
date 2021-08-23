@@ -1,11 +1,24 @@
-const DefaultLoginHeader =
-    '<div class="left">\n' +
-    '    <i class="material-icons">construction</i>\n' +
+const DefaultLoginHeader = '    <i class="material-icons">construction</i>\n' +
     '    <h1>LazyDB <span>Alpha</span></h1>\n' +
-    '    <h5>Next-gen SaaS backend</h5>\n' +
-    '</div>\n';
+    '    <h5>Next-gen SaaS backend</h5>\n';
 
-function OpenConnectScreen(Lazy_DB, on_connect = function (){},title = "Login", message = "Sign into your account", img = "https://browser-tools.lazydb.com/logo_lazydb.png", header = DefaultLoginHeader){
+DefaultLazyDBLoginSuccess =(userData) => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Success !',
+        text: 'Successfully connected as ' + userData.username,
+    })
+};
+
+DefaultLazyDBLoginError =(error) => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Error ...',
+        text: 'Invalid credential',
+    })
+};
+
+function OpenConnectScreen(Lazy_DB, on_connect = DefaultLazyDBLoginSuccess, on_error = DefaultLazyDBLoginError,title = "Login", message = "Sign into your account", img = "https://browser-tools.lazydb.com/logo_lazydb.png", header = DefaultLoginHeader){
     window.lastBodyContent = document.body.innerHTML;
     window.lazy_connect = function (){
         let email = document.getElementById('lazydb_loginEmail').value;
@@ -19,26 +32,18 @@ function OpenConnectScreen(Lazy_DB, on_connect = function (){},title = "Login", 
             return
         }
         Lazy_DB.connect(email.toLowerCase(), password).then(function (data){
-            window.userData = data;
             CloseConnectScreen();
-            on_connect();
-            Swal.fire({
-                icon: 'success',
-                title: 'Success !',
-                text: 'Successfully connected',
-            })
-        }).catch(function (){
-            Swal.fire({
-                icon: 'error',
-                title: 'Error ...',
-                text: 'Invalid credential',
-            })
+            on_connect(data);
+        }).catch(function (error){
+
         })
     }
     document.body.innerHTML =
         '<section class="lazydb_login">\n' +
         '    <div class="container">\n' +
-                 header +
+                '<div class="left">\n' +
+                    header +
+                '</div>\n' +
         '        <div class="right">\n' +
         '            <div class="header">\n' +
         '                <img src="' + img + '">\n' +
