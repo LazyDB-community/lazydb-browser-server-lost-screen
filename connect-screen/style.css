@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;600&display=swap');
+
+body{
+    --login-blue: rgba(60,131,255,1.0);
+    --login_blue_light: rgba(60,131,255,0.2);
+    --login_blue_medium: rgba(60,131,255,0.3);
+    --login-primary: rgba(52,73,94,1.0);
+    --login-primary_light: #EAEAEA;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+.lazydb_login .container{
+    background: var(--login-blue);
+    color: var(--login-primary);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.lazydb_login .left{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--login-primary_light);
+}
+
+.lazydb_login .left h1{
+    margin: 15px 0;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lazydb_login .left h5{
+    margin: 0;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.lazydb_login .left i{
+    margin: 0;
+    font-size: 75px;
+}
+
+.lazydb_login .left h1 span{
+    margin: 0;
+    font-size: 16px;
+    padding: 8px 12px;
+    background: var(--login-primary);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+.lazydb_login .right{
+    width: 50%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+.lazydb_login .right .header{
+    background: var(--login-primary_light);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+
+.lazydb_login .right .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid var(--login-primary_light);
+    margin: 0 0 0 calc(50% - 30px);
+}
+
+.lazydb_login .right .header img{
+    height: 75px;
+}
+
+.lazydb_login .right .form{
+    margin: 25px;
+}
+
+.lazydb_login .right .form h2{
+    margin: 0 0 25px 0;
+}
+
+.lazydb_login .right .form label{
+    display: block;
+    margin: 15px 0 5px 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.lazydb_login .right .form input{
+    margin: 0;
+    padding: 10px;
+    border: none;
+    width: calc(100% - 20px);
+    background: var(--login-primary_light);
+    outline: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    color: var(--login-primary);
+}
+
+.lazydb_login .right .form .button{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    background: var(--login_blue_light);
+    color: var(--login-blue);
+    transition: 0.5s ease;
+    margin: 35px 0 25px 0;
+}
+
+.lazydb_login .right .form .button:hover {
+    background: var(--login_blue_medium);
+    transition: 0.5s ease;
+}
