@@ -35,7 +35,7 @@ function OpenConnectScreen(Lazy_DB, on_connect = DefaultLazyDBLoginSuccess, on_e
             CloseConnectScreen();
             on_connect(data);
         }).catch(function (error){
-
+            on_error(error);
         })
     }
     document.body.innerHTML =
