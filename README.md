@@ -35,7 +35,7 @@ const optional_header = DefaultServerLoadingHeader;
 OpenServerLoadingScreen(optional_title, optional_message, optional_header);
 ```
 
-##Login screen
+## Login screen
 A dynamic login screen.
 
 Add the includes to your html head :
