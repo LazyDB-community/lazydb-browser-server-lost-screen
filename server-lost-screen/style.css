@@ -98,7 +98,7 @@ body{
     height: 150px;
     background: none;
 }
-.lazydb_load_error_lds-ripple.red div {
+.lazydb_load_error_lds-ripple.lazydb_red div {
     position: absolute;
     border: 5px solid var(--server-lost-red);
     opacity: 1;

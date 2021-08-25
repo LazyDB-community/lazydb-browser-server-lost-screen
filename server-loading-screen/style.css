@@ -104,7 +104,7 @@ body{
     height: 150px;
     background: none;
 }
-.lazydb_load_lds-ripple.red div {
+.lazydb_load_lds-ripple.lazydb_blue div {
     position: absolute;
     border: 5px solid var(--server-loading-blue);
     opacity: 1;

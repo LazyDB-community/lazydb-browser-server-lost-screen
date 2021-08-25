@@ -12,7 +12,7 @@ function OpenServerLostScreen(title = "Connection lost", message = "Connection t
         '            <div class="arrow-down"></div>\n' +
         '            <div class="loading">\n' +
         '                <h1>' + title + '</h1>\n' +
-        '                <div class="lazydb_load_error_lds-ripple red"><div></div><div></div></div>\n' +
+        '                <div class="lazydb_load_error_lds-ripple lazydb_red"><div></div><div></div></div>\n' +
         '                <h4 id="lazydb_load_error_sub_title">' + message + ' (auto retry in <span>' + (ServerLostAutoRetryTime / 1000) + '</span>s)</h4>\n' +
         '            </div>\n' +
         '        </div>\n' +

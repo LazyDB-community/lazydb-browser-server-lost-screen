@@ -11,7 +11,7 @@ function OpenServerLoadingScreen(promise_loading,title = "Loading in progress", 
         '            <div class="arrow-down"></div>\n' +
         '            <div class="loading">\n' +
         '                <h1>' + title + '</h1>\n' +
-        '                <div class="lazydb_load_lds-ripple red"><div></div><div></div></div>\n' +
+        '                <div class="lazydb_load_lds-ripple lazydb_blue"><div></div><div></div></div>\n' +
         '                <h4 id="lazydb_load_sub_title">' + message + '</h4>\n' +
         '            </div>\n' +
         '        </div>\n' +
