@@ -3,7 +3,7 @@ const DefaultServerLostHeader = '<i class="material-icons">construction</i>' +
 '                <h1>LazyDB <span>Alpha</span></h1>' +
 '                <h5>Next-gen SaaS backend</h5>';
 
-function OpenServerLostScreen(title = "Connection lost", message = "Connection to your LazyDB server lost ", header = DefaultServerLostHeader,params){
+function OpenServerLostScreen(title = "Connection lost", message = "Connection to your LazyDB server lost ", header = DefaultServerLostHeader, params = {}){
     document.body.innerHTML = '<section class="lazydb_load_error">\n' +
         '    <div class="container">\n' +
         '        <div class="sub_container">\n' +
