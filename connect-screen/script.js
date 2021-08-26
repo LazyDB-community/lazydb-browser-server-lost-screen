@@ -18,7 +18,7 @@ DefaultLazyDBLoginError =(error) => {
     })
 };
 
-function OpenConnectScreen(Lazy_DB, on_connect = DefaultLazyDBLoginSuccess, on_error = DefaultLazyDBLoginError,title = "Login", message = "Sign into your account", img = "https://browser-tools.lazydb.com/logo_lazydb.png", header = DefaultLoginHeader, params){
+function OpenConnectScreen(Lazy_DB, on_connect = DefaultLazyDBLoginSuccess, on_error = DefaultLazyDBLoginError, title = "Login", message = "Sign into your account", img = "https://browser-tools.lazydb.com/logo_lazydb.png", header = DefaultLoginHeader, params = {}){
     window.lastBodyContent = document.body.innerHTML;
     window.lazy_connect = function (){
         let email = document.getElementById('lazydb_loginEmail').value;
