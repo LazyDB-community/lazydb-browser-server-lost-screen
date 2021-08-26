@@ -14,7 +14,7 @@ Add the includes to your html head :
 ```
 Then, you just have to call OpenServerLostScreen anytime you want :
 ```javascript
-const params = {
+const params_lost = {
     'text_color': '',
     'primary_color': '',
     'span_background': '',
@@ -26,7 +26,7 @@ const params = {
 const optional_title = "Connection lost";
 const optional_message = "Connection to your LazyDB server lost";
 const optional_header = DefaultServerLostHeader;
-OpenServerLostScreen(optional_title, optional_message, optional_header, params);
+OpenServerLostScreen(optional_title, optional_message, optional_header, params_lost);
 ```
 
 ## Server loading screen
@@ -42,7 +42,7 @@ Add the includes to your html head :
 ```
 Then, you just have to call OpenServerLoadingScreen anytime you want :
 ```javascript
-const params = {
+const params_loading = {
     'text_color': '',
     'primary_color': '',
     'span_background': '',
@@ -55,7 +55,7 @@ const params = {
 const optional_title = "Loading in progress";
 const optional_message = "Your content will appear in a few second :)";
 const optional_header = DefaultServerLoadingHeader;
-OpenServerLoadingScreen(optional_title, optional_message, optional_header);
+OpenServerLoadingScreen(optional_title, optional_message, optional_header, params_loading);
 ```
 
 ## Login screen
@@ -85,5 +85,17 @@ const optionnal_title = "Login";
 const optionnal_message = "Sign into your account";
 const optionnal_img = "https://browser-tools.lazydb.com/logo_lazydb.png";
 const optionnal_header = DefaultLoginHeader;
-OpenConnectScreen(db,optionnal_onConnect,optionnal_onError,optionnal_title,optionnal_message,optionnal_img,optionnal_header);
+const params_login = {
+    'right_text_color': '',
+    'left_text_color': '',
+    'primary_color': '',
+    'span_background': '',
+    'span_color': '',
+    'header_color': '',
+    'content_color': '',
+    'input_background': '',
+    'input_color': '',
+    'button_color': ''
+}
+OpenConnectScreen(db,optionnal_onConnect,optionnal_onError,optionnal_title,optionnal_message,optionnal_img,optionnal_header,params_login);
 ```
