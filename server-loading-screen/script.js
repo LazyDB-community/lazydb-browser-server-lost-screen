@@ -2,7 +2,7 @@ const DefaultServerLoadingHeader = '<i class="material-icons">construction</i>' 
 '                <h1>LazyDB <span>Alpha</span></h1>' +
 '                <h5>Next-gen SaaS backend</h5>';
 
-function OpenServerLoadingScreen(promise_loading,title = "Loading in progress", message = "Your content will appear in a few second :)", header = DefaultServerLoadingHeader){
+function OpenServerLoadingScreen(promise_loading,title = "Loading in progress", message = "Your content will appear in a few second :)", header = DefaultServerLoadingHeader, params){
     const loading = document.createElement("section");
     loading.innerHTML = '    <div class="container">\n' +
         '        <div class="sub_container">\n' +
