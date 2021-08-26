@@ -3,7 +3,7 @@ const DefaultServerLostHeader = '<i class="material-icons">construction</i>' +
 '                <h1>LazyDB <span>Alpha</span></h1>' +
 '                <h5>Next-gen SaaS backend</h5>';
 
-function OpenServerLostScreen(title = "Connection lost", message = "Connection to your LazyDB server lost ", header = DefaultServerLostHeader){
+function OpenServerLostScreen(title = "Connection lost", message = "Connection to your LazyDB server lost ", header = DefaultServerLostHeader,params){
     document.body.innerHTML = '<section class="lazydb_load_error">\n' +
         '    <div class="container">\n' +
         '        <div class="sub_container">\n' +
@@ -18,6 +18,30 @@ function OpenServerLostScreen(title = "Connection lost", message = "Connection t
         '        </div>\n' +
         '    </div>\n' +
         '</section>';
+    if (params.text_color){
+        document.getElementsByClassName('sub_container')[0].style.color = params.text_color;
+    }
+    if (params.primary_color){
+        document.getElementsByClassName('container')[0].style.background = params.primary_color;
+    }
+    if (params.span_background){
+        document.getElementsByClassName('lazydb_load_error')[0].getElementsByTagName('span')[0].style.background = params.span_background;
+    }
+    if (params.span_color){
+        document.getElementsByClassName('lazydb_load_error')[0].getElementsByTagName('span')[0].style.color = params.span_color;
+    }
+    if (params.header_color){
+        document.getElementsByClassName('header')[0].style.background = params.header_color;
+        document.getElementsByClassName('arrow-down')[0].style.borderTop = "30px solid " + params.header_color;
+    }
+    if (params.content_color){
+        document.getElementsByClassName('sub_container')[0].style.background = params.content_color;
+    }
+    if (params.animate_loader){
+        document.getElementsByClassName('lazydb_red')[0].getElementsByTagName('div')[0].style.border = "5px solid " + params.animate_loader;
+        document.getElementsByClassName('lazydb_red')[0].getElementsByTagName('div')[1].style.border = "5px solid " + params.animate_loader;
+    }
+
     setTimeout(function (){
         document.location.reload();
     },ServerLostAutoRetryTime);

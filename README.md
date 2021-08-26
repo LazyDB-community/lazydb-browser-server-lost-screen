@@ -14,10 +14,19 @@ Add the includes to your html head :
 ```
 Then, you just have to call OpenServerLostScreen anytime you want :
 ```javascript
+const params = {
+    'text_color': '',
+    'primary_color': '',
+    'span_background': '',
+    'span_color': '',
+    'header_color': '',
+    'content_color': '',
+    'animate_loader': ''
+}
 const optional_title = "Connection lost";
 const optional_message = "Connection to your LazyDB server lost";
 const optional_header = DefaultServerLostHeader;
-OpenServerLostScreen(optional_title, optional_message, optional_header);
+OpenServerLostScreen(optional_title, optional_message, optional_header, params);
 ```
 
 ## Server loading screen
@@ -33,6 +42,16 @@ Add the includes to your html head :
 ```
 Then, you just have to call OpenServerLoadingScreen anytime you want :
 ```javascript
+const params = {
+    'text_color': '',
+    'primary_color': '',
+    'span_background': '',
+    'span_color': '',
+    'header_color': '',
+    'content_color': '',
+    'animate_loader': ''
+}
+
 const optional_title = "Loading in progress";
 const optional_message = "Your content will appear in a few second :)";
 const optional_header = DefaultServerLoadingHeader;
