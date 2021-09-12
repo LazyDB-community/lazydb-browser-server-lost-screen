@@ -46,3 +46,32 @@ function copyToClipboard(n) {
         }
     });
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+    const code_examples = document.getElementsByTagName("code_example");
+
+    for (let i = 0; i < code_examples.length; i++) {
+        const code_example = code_examples[i];
+
+        const new_child = document.createElement("div");
+
+        let lines = code_example.innerText.split('\n');
+
+        for (let j = 0; j < lines.length; j++) {
+            lines[j] = '<div><p>' + (j + 1) + '</p><pre><code>' + lines[j] + '</code></pre></div>';
+        }
+
+        new_child.className = 'code';
+        new_child.innerHTML = '<div>\n' +
+            '        <!-- <div class="tooltip">Copied on clipboard !</div> -->\n' +
+            '        <div class="top">\n' +
+            '            <h4>' + code_example.getAttribute("title") + '</h4>\n' +
+            '            <i class="material-icons copy">content_paste</i>\n' +
+            '        </div>\n' +
+            '        <div class="code_lang js">\n' + lines.join('\n') +
+        '        </div>\n' +
+        '    </div>';
+
+        document.body.replaceChild(new_child, code_example);
+    }
+});
