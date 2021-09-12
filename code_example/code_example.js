@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         const new_child = document.createElement("div");
 
-        let lines = code_example.innerHTML.split('<br>');
+        let lines = code_example.innerHTML.split('\n');
 
         for (let j = 0; j < lines.length; j++) {
             lines[j] = '<div><p>' + (j + 1) + '</p><pre><code>' + lines[j] + '</code></pre></div>';
