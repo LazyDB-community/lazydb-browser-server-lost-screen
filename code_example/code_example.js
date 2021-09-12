@@ -71,10 +71,12 @@ document.addEventListener("DOMContentLoaded", function(){
             '            <h4>' + code_example.getAttribute("title") + '</h4>\n' +
             '            <i class="material-icons copy">content_paste</i>\n' +
             '        </div>\n' +
-            '        <div class="code_lang js">\n' + lines.join('\n') +
+            '        <div class="code_lang ' + code_example.getAttribute("lang") + '">\n' + lines.join('\n') +
         '        </div>\n' +
         '    </div>';
 
         code_example.parentElement.replaceChild(new_child, code_example);
+
+        highLightCode(new_child);
     }
 });
