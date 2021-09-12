@@ -1,4 +1,4 @@
-const copy_buttons = document.body.querySelectorAll("div.code div.top i.copy");
+/*const copy_buttons = document.body.querySelectorAll("div.code div.top i.copy");
 const code_blocks = document.body.querySelectorAll("div.code > div");
 const code_lang_selector = document.body.querySelectorAll("div.code div.top > div");
 
@@ -8,7 +8,7 @@ for (let i = 0; i < code_blocks.length; i++) {
     };
 
     highLightCode(code_blocks[i]);
-}
+}*/
 
 function highLightCode(code_block){
 
