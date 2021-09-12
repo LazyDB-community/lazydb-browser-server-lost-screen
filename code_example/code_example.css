@@ -23,6 +23,7 @@ body {
 }
 
 .code>div{
+    white-space: initial;
     position: relative;
     background: var(--content_code_background);
     color: var(--content_code_color);
