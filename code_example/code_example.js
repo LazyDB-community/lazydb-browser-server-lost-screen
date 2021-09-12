@@ -72,6 +72,6 @@ document.addEventListener("DOMContentLoaded", function(){
         '        </div>\n' +
         '    </div>';
 
-        document.body.replaceChild(new_child, code_example);
+        code_example.parentElement.replaceChild(new_child, code_example);
     }
 });
