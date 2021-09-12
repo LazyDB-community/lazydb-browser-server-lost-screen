@@ -14,7 +14,7 @@ function highLightCode(code_block){
 
     for (let i = 0; i < code_block.querySelectorAll("pre > code").length; i++) {
         const current_child = code_block.querySelectorAll("pre > code")[i];
-        console.log(current_child.parentElement.parentElement.parentElement.className);
+        console.log(current_child.textContent);
         current_child.innerHTML = hljs.highlight(current_child.textContent, {language: current_child.parentElement.parentElement.parentElement.className.split(" ")[1]}).value;
     }
 
