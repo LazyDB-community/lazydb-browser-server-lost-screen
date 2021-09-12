@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
         let lines = code_example.innerHTML.split('\n');
 
+        lines.shift();
+        lines.pop();
+
         for (let j = 0; j < lines.length; j++) {
             lines[j] = '<div><p>' + (j + 1) + '</p><pre><code>' + lines[j] + '</code></pre></div>';
         }
