@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function(){
     for (let i = 0; i < code_examples.length; i++) {
         const code_example = code_examples[i];
 
+        console.log(code_example);
+
         const new_child = document.createElement("div");
 
         let lines = code_example.innerHTML.split('\n');
