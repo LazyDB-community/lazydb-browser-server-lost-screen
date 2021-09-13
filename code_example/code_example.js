@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for (let i = 0; i < code_examples.length; i++) {
 
-        console.log("analyzing code exmaple number ", i);
+        console.log("analyzing code example number ", i);
 
         const code_example = code_examples[i];
 
@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function(){
             copyToClipboard(new_child.children[0]);
         }
 
+        console.log("stop analyzing code example number ", i);
 
     }
 });
