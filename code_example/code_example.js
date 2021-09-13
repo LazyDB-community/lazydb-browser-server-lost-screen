@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
         let lines = code_example.innerHTML.split('\n');
 
+        console.log(lines);
+
         lines.shift();
         lines.pop();
 
