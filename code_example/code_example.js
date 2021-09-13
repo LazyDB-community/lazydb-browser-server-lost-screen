@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for (let i = 0; i < code_examples.length; i++) {
 
-        console.log("analyzing code example number ", i);
+        console.log("analyzing code example number ", i, " out of ", code_examples.length);
 
         const code_example = code_examples[i];
 
