@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function(){
             const new_code = document.createElement("code");
             new_code.textContent = lines[j];
 
-            lines[j] = '<div><p>' + (j + 1) + '</p><pre>' + new_code.innerHTML + '</pre></div>';
+            lines[j] = '<div><p>' + (j + 1) + '</p><pre>' + new_code.outerHTML + '</pre></div>';
         }
 
         new_child.className = 'code';
