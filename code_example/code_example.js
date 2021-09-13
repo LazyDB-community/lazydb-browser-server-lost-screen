@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function(){
         highLightCode(new_child);
 
         new_child.querySelector("i").onclick = (e) => {
-            copyToClipboard(new_child);
+            copyToClipboard(new_child.children[0]);
         }
 
 
