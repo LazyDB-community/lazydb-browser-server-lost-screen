@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
         let lines = code_example.innerHTML.split('\n');
 
+        const lang = code_example.getAttribute("lang");
+
         console.log(lines);
 
         lines.shift();
@@ -50,7 +52,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
         for (let j = 0; j < lines.length; j++) {
             const new_code = document.createElement("code");
-            new_code.textContent = lines[j];
+            if(lang === 'html'){
+                new_code.textContent = lines[j];
+            }else{
+                new_code.innerHTML = lines[j];
+            }
 
             lines[j] = '<div><p>' + (j + 1) + '</p><pre>' + new_code.outerHTML + '</pre></div>';
         }
@@ -62,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function(){
             '            <h4>' + code_example.getAttribute("title") + '</h4>\n' +
             '            <i class="material-icons copy">content_paste</i>\n' +
             '        </div>\n' +
-            '        <div class="code_lang ' + code_example.getAttribute("lang") + '">\n' + lines.join('\n') +
+            '        <div class="code_lang ' + lang + '">\n' + lines.join('\n') +
         '        </div>\n' +
         '    </div>';
 
