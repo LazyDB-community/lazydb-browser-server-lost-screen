@@ -49,7 +49,10 @@ document.addEventListener("DOMContentLoaded", function(){
         lines.pop();
 
         for (let j = 0; j < lines.length; j++) {
-            lines[j] = '<div><p>' + (j + 1) + '</p><pre><code>' + lines[j] + '</code></pre></div>';
+            const new_code = document.createElement("code");
+            new_code.textContent = lines[j];
+
+            lines[j] = '<div><p>' + (j + 1) + '</p><pre>' + new_code.innerHTML + '</pre></div>';
         }
 
         new_child.className = 'code';
