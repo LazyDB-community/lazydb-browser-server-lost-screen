@@ -2,7 +2,6 @@ function highLightCode(code_block){
 
     for (let i = 0; i < code_block.querySelectorAll("pre > code").length; i++) {
         const current_child = code_block.querySelectorAll("pre > code")[i];
-        console.log(current_child.textContent);
         current_child.innerHTML = hljs.highlight(current_child.textContent, {language: current_child.parentElement.parentElement.parentElement.className.split(" ")[1]}).value;
     }
 
@@ -15,8 +14,6 @@ function copyToClipboard(el) {
         const current_child = el.querySelectorAll("pre > code")[i];
         code += current_child.textContent + "\n";
     }
-
-    console.log(code);
 
     navigator.clipboard.writeText(code).then(() => {
 
@@ -39,6 +36,9 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log("number of code examples = ", code_examples.length);
 
     for (let i = 0; i < code_examples.length; i++) {
+
+        console.log("analyzing code exmaple number ", i);
+
         const code_example = code_examples[i];
 
         const new_child = document.createElement("div");
@@ -46,8 +46,6 @@ document.addEventListener("DOMContentLoaded", function(){
         let lines = code_example.innerHTML.split('\n');
 
         const lang = code_example.getAttribute("lang");
-
-        console.log(lines);
 
         lines.shift();
         lines.pop();
