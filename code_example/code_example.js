@@ -41,46 +41,48 @@ document.addEventListener("DOMContentLoaded", function(){
 
         const code_example = code_examples[i];
 
-        const new_child = document.createElement("div");
+        setTimeout((e) => {
+            const new_child = document.createElement("div");
 
-        let lines = code_example.innerHTML.split('\n');
+            let lines = code_example.innerHTML.split('\n');
 
-        const lang = code_example.getAttribute("lang");
+            const lang = code_example.getAttribute("lang");
 
-        lines.shift();
-        lines.pop();
+            lines.shift();
+            lines.pop();
 
-        for (let j = 0; j < lines.length; j++) {
-            const new_code = document.createElement("code");
-            if(lang === 'html'){
-                new_code.textContent = lines[j];
-            }else{
-                new_code.innerHTML = lines[j];
+            for (let j = 0; j < lines.length; j++) {
+                const new_code = document.createElement("code");
+                if(lang === 'html'){
+                    new_code.textContent = lines[j];
+                }else{
+                    new_code.innerHTML = lines[j];
+                }
+
+                lines[j] = '<div><p>' + (j + 1) + '</p><pre>' + new_code.outerHTML + '</pre></div>';
             }
 
-            lines[j] = '<div><p>' + (j + 1) + '</p><pre>' + new_code.outerHTML + '</pre></div>';
-        }
+            new_child.className = 'code';
+            new_child.innerHTML = '<div>\n' +
+                '        <!-- <div class="tooltip">Copied on clipboard !</div> -->\n' +
+                '        <div class="top">\n' +
+                '            <h4>' + code_example.getAttribute("title") + '</h4>\n' +
+                '            <i class="material-icons copy">content_paste</i>\n' +
+                '        </div>\n' +
+                '        <div class="code_lang ' + lang + '">\n' + lines.join('\n') +
+                '        </div>\n' +
+                '    </div>';
 
-        new_child.className = 'code';
-        new_child.innerHTML = '<div>\n' +
-            '        <!-- <div class="tooltip">Copied on clipboard !</div> -->\n' +
-            '        <div class="top">\n' +
-            '            <h4>' + code_example.getAttribute("title") + '</h4>\n' +
-            '            <i class="material-icons copy">content_paste</i>\n' +
-            '        </div>\n' +
-            '        <div class="code_lang ' + lang + '">\n' + lines.join('\n') +
-        '        </div>\n' +
-        '    </div>';
+            code_example.parentElement.replaceChild(new_child, code_example);
 
-        code_example.parentElement.replaceChild(new_child, code_example);
+            highLightCode(new_child);
 
-        highLightCode(new_child);
+            new_child.querySelector("i").onclick = (e) => {
+                copyToClipboard(new_child.children[0]);
+            }
 
-        new_child.querySelector("i").onclick = (e) => {
-            copyToClipboard(new_child.children[0]);
-        }
-
-        console.log("stop analyzing code example number ", i);
+            console.log("stop analyzing code example number ", i);
+        },50);
 
     }
 });
