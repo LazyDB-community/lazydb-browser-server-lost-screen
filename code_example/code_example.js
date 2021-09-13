@@ -36,10 +36,10 @@ function copyToClipboard(el) {
 document.addEventListener("DOMContentLoaded", function(){
     const code_examples = document.getElementsByTagName("code_example");
 
+    console.log("number of code examples = ", code_examples.length);
+
     for (let i = 0; i < code_examples.length; i++) {
         const code_example = code_examples[i];
-
-        console.log(code_example);
 
         const new_child = document.createElement("div");
 
