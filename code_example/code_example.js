@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
         highLightCode(new_child);
 
-        code_example.querySelector("i").onclick = (e) => {
-            copyToClipboard(code_example);
+        new_child.querySelector("i").onclick = (e) => {
+            copyToClipboard(new_child);
         }
 
 
